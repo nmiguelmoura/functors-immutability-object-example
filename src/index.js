@@ -5,14 +5,14 @@ const myPhoneNumber = PhoneNumber.of({
   ind: "+351",
 });
 
-if (myPhoneNumber.isValid()) {
+if (!myPhoneNumber.isValid()) {
   const message = myPhoneNumber.value.value.message;
   // throw new Error(message);
-  console.log(`WILL THROW: ${message}`);
+  console.log(`WILL THROW: ${myPhoneNumber.getErrorMessage()}`);
 }
 
 // // SCENARIO 1 - call prototype function
-console.log(myPhoneNumber.fullSentence());
+// console.log(myPhoneNumber.fullSentence());
 
 // // SCENARIO 2 - map once
 // const { value: completePhone } = myPhoneNumber.value.map(

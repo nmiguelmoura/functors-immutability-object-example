@@ -1,9 +1,13 @@
-const { Nothing } = require("./Functors");
+const { Some, Nothing } = require("./Functors");
 
 const BaseObject = function () {};
 
 BaseObject.prototype.isValid = function () {
-  return this.value instanceof Nothing;
+  return this.value instanceof Some;
+};
+
+BaseObject.prototype.getErrorMessage = function () {
+  return this.isValid() ? "" : this.value.value.message;
 };
 
 module.exports = BaseObject;
