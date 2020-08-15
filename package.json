@@ -1,0 +1,22 @@
+{
+  "name": "functional_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel ./playground -d dist",
+    "version": "babel --version"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-es2017": "^7.0.0-beta.53"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
