@@ -76,35 +76,35 @@ if (!myPhoneNumber.isValid()) {
 
 // ********** COMPOSE VALUE OBJECTS ****************
 // SCENARIO 10 - using a complex value object
-// const me = Person.of({
-//   firstName: "nuno",
-//   phoneNumber: {
-//     numb: "123456789",
-//     ind: "+351",
-//   }
-// });
+const me = Person.of({
+  firstName: "nuno",
+  phoneNumber: {
+    numb: "123456789",
+    ind: "+351",
+  }
+});
 
-// const you = Person.of({
-//   firstName: "nuno",
-//   phoneNumber: {
-//     numb: "123456789",
-//     ind: "+351",
-//   }
-// });
+const you = Person.of({
+  firstName: "nuno",
+  phoneNumber: {
+    numb: "123456789",
+    ind: "+351",
+  }
+});
 
-// const other = Person.of({
-//   firstName: "miguel",
-//   phoneNumber: {
-//     numb: "123456789",
-//     ind: "+351",
-//   }
-// });
+const other = Person.of({
+  firstName: "miguel",
+  phoneNumber: {
+    numb: "123456789",
+    ind: "+351",
+  }
+});
 
-// console.log(me.getValue().phoneNumber.fullSentence());
-// console.log(me.fullSentence());
-// console.log(me.serialize());
-// console.log(me.equals(you))
-// console.log(me.equals(other))
+console.log(me.getValue().phoneNumber.fullSentence());
+console.log(me.fullSentence());
+console.log(me.serialize());
+console.log(me.equals(you))
+console.log(me.equals(other))
 
 
 

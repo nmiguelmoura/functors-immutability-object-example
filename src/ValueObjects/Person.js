@@ -36,23 +36,38 @@ Person.prototype = { ...BaseObject.prototype, ...Person.prototype };
 
 Person.prototype.fullSentence = function () {
   const { firstName, phoneNumber } = this.getValue();
-  return `My name is ${firstName.getValue()} and my phone number is ${phoneNumber.fullNumber()}`
+
+  const formattedName = firstName.value
+    .map((val) => val.toUpperCase())
+    .map((val) => val.split(""))
+    .map((val) => val.join(".")).value;
+
+  return `My name is ${formattedName} and my phone number is ${phoneNumber.fullNumber()}`;
 };
 
 Person.prototype.equals = function (other) {
-  const { firstName: thisFirstName, phoneNumber: thisPhoneNumber } = this.getValue();
-  const { firstName: otherFirstName, phoneNumber: otherPhoneNumber } = other.getValue();
-  return thisFirstName.equals(otherFirstName) && thisPhoneNumber.equals(otherPhoneNumber);
+  const {
+    firstName: thisFirstName,
+    phoneNumber: thisPhoneNumber,
+  } = this.getValue();
+  const {
+    firstName: otherFirstName,
+    phoneNumber: otherPhoneNumber,
+  } = other.getValue();
+  return (
+    thisFirstName.equals(otherFirstName) &&
+    thisPhoneNumber.equals(otherPhoneNumber)
+  );
 };
 
 Person.prototype.serialize = function () {
   const { firstName, phoneNumber } = this.getValue();
-  
+
   return {
     firstName: firstName.getValue(),
-    phoneNumber: phoneNumber.getValue()
+    phoneNumber: phoneNumber.getValue(),
   };
-}
+};
 
 Person.of = function (value) {
   return new Person(value);
