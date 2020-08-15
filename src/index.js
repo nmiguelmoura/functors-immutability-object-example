@@ -18,14 +18,14 @@ if (!myPhoneNumber.isValid()) {
 // // SCENARIO 2 - call prototype function
 // console.log(myPhoneNumber.fullSentence());
 
-// ********** USE COMPOSITION ****************
+// ********** DCLARATIVE AND CHAINABLE ****************
 // // SCENARIO 3 - map once
 // const { value: completePhone } = myPhoneNumber.value.map(
 //   (val) => `${val.ind}${val.numb}`
 // );
 // console.log(completePhone);
 
-// // SCENARIO 4 - chain map
+// // SCENARIO 4 - chainable
 // const { value: fullSentence } = myPhoneNumber.value
 //   .map((val) => `${val.ind}${val.numb}`)
 //   .map((val) => `The complete phone number is ${val}`);
