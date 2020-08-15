@@ -75,39 +75,42 @@ if (!myPhoneNumber.isValid()) {
 // console.log(myPhoneNumber.equals(thirdPhoneNumber));
 
 // ********** COMPOSE VALUE OBJECTS ****************
-// SCENARIO 10 - using a complex value object
+
 const me = Person.of({
   firstName: "nuno",
   phoneNumber: {
     numb: "123456789",
-    ind: "+351",
-  }
+    ind: "+352",
+  },
 });
 
-const you = Person.of({
-  firstName: "nuno",
-  phoneNumber: {
-    numb: "123456789",
-    ind: "+351",
-  }
-});
+if (!me.isValid()) {
+  // throw new Error(message);
+  console.log(`WILL THROW: ${me.getErrorMessage()}`);
+}
 
-const other = Person.of({
-  firstName: "miguel",
-  phoneNumber: {
-    numb: "123456789",
-    ind: "+351",
-  }
-});
+// SCENARIO 10 - using a complex value object
 
-console.log(me.getValue().phoneNumber.fullSentence());
-console.log(me.fullSentence());
-console.log(me.serialize());
-console.log(me.equals(you))
-console.log(me.equals(other))
+// console.log(me.getValue().phoneNumber.fullSentence());
+// console.log(me.fullSentence());
+// console.log(me.serialize());
 
+// SCENARIO 11 - compare complex objects
+// const you = Person.of({
+//   firstName: "nuno",
+//   phoneNumber: {
+//     numb: "123456789",
+//     ind: "+351",
+//   },
+// });
 
+// const other = Person.of({
+//   firstName: "miguel",
+//   phoneNumber: {
+//     numb: "123456789",
+//     ind: "+351",
+//   },
+// });
 
-
-
-
+// console.log(me.equals(you));
+// console.log(me.equals(other));

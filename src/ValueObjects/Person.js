@@ -11,17 +11,17 @@ const Person = function (value) {
 
   const firstName = FirstName.of(value.firstName);
   if (!firstName.isValid()) {
-    this.value = Nothing.of(
-      `First name invalid: ${firstName.getErrorMessage()}`
-    );
+    this.value = Nothing.of({
+      message: `First name invalid: ${firstName.getErrorMessage()}`,
+    });
     return deepFreeze(this);
   }
 
   const phoneNumber = PhoneNumber.of(value.phoneNumber);
   if (!phoneNumber.isValid()) {
-    this.value = Nothing.of(
-      `Phone number invalid: ${phoneNumber.getErrorMessage()}`
-    );
+    this.value = Nothing.of({
+      message: `Phone number invalid: ${phoneNumber.getErrorMessage()}`,
+    });
     return deepFreeze(this);
   }
 
