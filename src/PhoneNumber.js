@@ -1,4 +1,4 @@
-const { Some } = require("./Functors");
+const { Something } = require("./Functors");
 const BaseObject = require("./BaseObject");
 const deepFreeze = require("./deepFreeze");
 const {
@@ -9,7 +9,7 @@ const {
 } = require("./validators");
 
 const PhoneNumber = function (value) {
-  this.value = Some.of(value)
+  this.value = Something.of(value)
     .validate(isObject)
     .validate((val) => isString(val.numb))
     .validate((val) => isAllDigits(val.numb))
