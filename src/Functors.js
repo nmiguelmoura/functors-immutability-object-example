@@ -1,12 +1,11 @@
 const axios = require("axios");
-const deepFreeze = require("./deepFreeze");
 
 const Nothing = function (value) {
   this.value = value;
 };
 
 Nothing.of = function (value) {
-  return deepFreeze(new Nothing(value));
+  return new Nothing(value);
 };
 
 Nothing.prototype.map = function (fn) {
@@ -22,7 +21,7 @@ const Some = function (value) {
 };
 
 Some.of = function (value) {
-  return deepFreeze(new Some(value));
+  return new Some(value);
 };
 
 Some.prototype.isNothing = function () {
