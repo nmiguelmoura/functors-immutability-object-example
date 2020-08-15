@@ -1,6 +1,6 @@
 const isObject = (val) => typeof val === "object";
 
-const isString = (val) => typeof val === "string";
+const isString = (val) => typeof val === "string" && val !== "";
 
 const isAllDigits = (val) => {
   const reg = new RegExp(/^\d+$/);
