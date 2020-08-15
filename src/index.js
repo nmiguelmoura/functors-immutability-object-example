@@ -6,7 +6,6 @@ const myPhoneNumber = PhoneNumber.of({
 });
 
 if (!myPhoneNumber.isValid()) {
-  const message = myPhoneNumber.value.value.message;
   // throw new Error(message);
   console.log(`WILL THROW: ${myPhoneNumber.getErrorMessage()}`);
 }
