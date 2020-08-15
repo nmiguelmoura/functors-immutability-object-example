@@ -37,7 +37,7 @@ Person.prototype = { ...BaseObject.prototype, ...Person.prototype };
 Person.prototype.fullSentence = function () {
   const { firstName, phoneNumber } = this.getValue();
 
-  const formattedName = firstName.value
+  const formattedName = firstName
     .map((val) => val.toUpperCase())
     .map((val) => val.split(""))
     .map((val) => val.join(".")).value;

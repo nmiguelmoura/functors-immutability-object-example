@@ -21,19 +21,19 @@ if (!myPhoneNumber.isValid()) {
 
 // ********** DCLARATIVE AND CHAINABLE ****************
 // // SCENARIO 3 - map once
-// const { value: completePhone } = myPhoneNumber.value.map(
+// const { value: completePhone } = myPhoneNumber.map(
 //   (val) => `${val.ind}${val.numb}`
 // );
 // console.log(completePhone);
 
 // // SCENARIO 4 - chainable
-// const { value: fullSentence } = myPhoneNumber.value
+// const { value: fullSentence } = myPhoneNumber
 //   .map((val) => `${val.ind}${val.numb}`)
 //   .map((val) => `The complete phone number is ${val}`);
 // console.log(fullSentence);
 
 // // SCENARIO 5 - somewhere you get a null value
-// const anotherFullSentence = myPhoneNumber.value
+// const anotherFullSentence = myPhoneNumber
 //   .map((val) => `${val.ind}${val.numb}`)
 //   .map(() => null)
 //   .map((val) => `The complete phone number is ${val}`);

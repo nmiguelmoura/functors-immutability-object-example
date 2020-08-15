@@ -12,13 +12,13 @@ const FirstName = function (value) {
 FirstName.prototype = { ...BaseObject.prototype, ...FirstName.prototype };
 
 FirstName.prototype.fullSentence = function () {
-  return this.value
+  return this
     .map((val) => `${val.ind}${val.numb}`)
     .map((val) => `The first name is ${val}`).value;
 };
 
 FirstName.prototype.equals = function (other) {
-  return this.value.value === other.value.value;
+  return this.getValue() === other.getValue();
 };
 
 FirstName.of = function (value) {

@@ -14,4 +14,8 @@ BaseObject.prototype.getErrorMessage = function () {
   return this.isValid() ? "" : this.value.value.message;
 };
 
+BaseObject.prototype.map = function (fn) {
+  return this.value.map(fn);
+};
+
 module.exports = BaseObject;

@@ -21,20 +21,20 @@ const PhoneNumber = function (value) {
 PhoneNumber.prototype = { ...BaseObject.prototype, ...PhoneNumber.prototype };
 
 PhoneNumber.prototype.fullNumber = function() {
-  return this.value
+  return this
     .map((val) => `${val.ind}${val.numb}`).value;
 }
 
 PhoneNumber.prototype.fullSentence = function () {
-  return this.value
+  return this
     .map((val) => `${val.ind}${val.numb}`)
     .map((val) => `My complete phone number is ${val}`).value;
 };
 
 PhoneNumber.prototype.equals = function (other) {
   return (
-    this.value.map((val) => `${val.ind}${val.numb}`).value ===
-    other.value.map((val) => `${val.ind}${val.numb}`).value
+    this.map((val) => `${val.ind}${val.numb}`).value ===
+    other.map((val) => `${val.ind}${val.numb}`).value
   );
 };
 
