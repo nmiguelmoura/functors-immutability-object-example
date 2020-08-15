@@ -17,7 +17,8 @@ PhoneNumber.prototype = { ...BaseObject.prototype, ...PhoneNumber.prototype };
 PhoneNumber.prototype.fullSentence = function () {
   return this.value
     .map((val) => `${val.ind}${val.numb}`)
-    .map((val) => `The complete phone number is ${val}`);
+    .map((val) => `The complete phone number is ${val}`)
+    .value;
 };
 
 PhoneNumber.prototype.equals = function (other) {

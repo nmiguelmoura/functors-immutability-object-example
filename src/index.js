@@ -12,7 +12,7 @@ if (myPhoneNumber.isValid()) {
 }
 
 // // SCENARIO 1 - call prototype function
-// console.log(myPhoneNumber.fullSentence());
+console.log(myPhoneNumber.fullSentence());
 
 // // SCENARIO 2 - map once
 // const { value: completePhone } = myPhoneNumber.value.map(
