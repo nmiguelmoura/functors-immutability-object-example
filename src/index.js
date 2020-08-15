@@ -11,9 +11,11 @@ if (!myPhoneNumber.isValid()) {
   console.log(`WILL THROW: ${myPhoneNumber.getErrorMessage()}`);
 }
 
+// ********** USE PROTOTYPE ****************
 // // SCENARIO 1 - call prototype function
 // console.log(myPhoneNumber.fullSentence());
 
+// ********** USE COMPOSITION ****************
 // // SCENARIO 2 - map once
 // const { value: completePhone } = myPhoneNumber.value.map(
 //   (val) => `${val.ind}${val.numb}`
@@ -33,6 +35,7 @@ if (!myPhoneNumber.isValid()) {
 //   .map((val) => `The complete phone number is ${val}`);
 // console.log(anotherFullSentence);
 
+// ********** IMMUTABILITY ****************
 // // SCENARIO 5 - its immutable
 // console.log(myPhoneNumber.value);
 // myPhoneNumber.value.value.numb = "123";
@@ -44,6 +47,7 @@ if (!myPhoneNumber.isValid()) {
 // myPhoneNumber.test = "123";
 // console.log(myPhoneNumber.value);
 
+// ********** COMPARE OBJECTS ****************
 // SCENARIO 6 - objects with same value
 // const secondPhoneNumber = PhoneNumber.of({
 //   numb: "123456789",
@@ -53,7 +57,7 @@ if (!myPhoneNumber.isValid()) {
 
 // SCENARIO 7 - objects with same value
 // const thirdPhoneNumber = PhoneNumber.of({
-//   numb: "987654321",
+//   numb: "111111111",
 //   ind: "+351",
 // });
 // console.log(myPhoneNumber.equals(thirdPhoneNumber));

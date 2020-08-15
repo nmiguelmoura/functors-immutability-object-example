@@ -37,6 +37,12 @@ Some.prototype.map = function (fn) {
 };
 
 Some.prototype.validate = function (fn) {
+  if (this.isNothing()) {
+    return Nothing.of({
+      message: `Can't apply the function because value is nothing: ${fn.toString()}`,
+    });
+  }
+  
   return fn(this.value)
     ? this
     : Nothing.of({
