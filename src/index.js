@@ -80,7 +80,7 @@ const me = Person.of({
   firstName: "nuno",
   phoneNumber: {
     numb: "123456789",
-    ind: "+352",
+    ind: "+351",
   },
 });
 
@@ -89,13 +89,12 @@ if (!me.isValid()) {
   console.log(`WILL THROW: ${me.getErrorMessage()}`);
 }
 
-// SCENARIO 10 - using a complex value object
-
+// // SCENARIO 10 - using a complex value object
 // console.log(me.getValue().phoneNumber.fullSentence());
 // console.log(me.fullSentence());
 // console.log(me.serialize());
 
-// SCENARIO 11 - compare complex objects
+// // SCENARIO 11 - compare complex objects
 // const you = Person.of({
 //   firstName: "nuno",
 //   phoneNumber: {
