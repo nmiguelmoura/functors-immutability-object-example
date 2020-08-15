@@ -8,7 +8,7 @@ const PhoneNumber = function (value) {
     .validate((val) => isString(val.numb))
     .validate((val) => isAllDigits(val.numb))
     .validate((val) => isFromPortugal(val.ind));
-  
+
   return deepFreeze(this);
 };
 
@@ -18,6 +18,13 @@ PhoneNumber.prototype.fullSentence = function () {
   return this.value
     .map((val) => `${val.ind}${val.numb}`)
     .map((val) => `The complete phone number is ${val}`);
+};
+
+PhoneNumber.prototype.equals = function (other) {
+  return (
+    this.value.map((val) => `${val.ind}${val.numb}`).value ===
+    other.value.map((val) => `${val.ind}${val.numb}`).value
+  );
 };
 
 PhoneNumber.of = function (value) {

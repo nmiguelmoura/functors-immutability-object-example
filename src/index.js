@@ -43,3 +43,17 @@ if (myPhoneNumber.isValid()) {
 // console.log(myPhoneNumber.value);
 // myPhoneNumber.test = "123";
 // console.log(myPhoneNumber.value);
+
+// SCENARIO 6 - objects with same value
+// const secondPhoneNumber = PhoneNumber.of({
+//   numb: "123456789",
+//   ind: "+351",
+// });
+// console.log(myPhoneNumber.equals(secondPhoneNumber));
+
+// SCENARIO 7 - objects with same value
+// const thirdPhoneNumber = PhoneNumber.of({
+//   numb: "987654321",
+//   ind: "+351",
+// });
+// console.log(myPhoneNumber.equals(thirdPhoneNumber));
