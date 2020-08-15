@@ -1,4 +1,4 @@
-const { Something, Nothing } = require("./Functors");
+const Something = require("../Functors/Something");
 
 const BaseObject = function () {};
 

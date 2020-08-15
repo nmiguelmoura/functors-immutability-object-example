@@ -1,12 +1,12 @@
-const { Something } = require("./Functors");
+const Something = require("../Functors/Something");
 const BaseObject = require("./BaseObject");
-const deepFreeze = require("./deepFreeze");
+const deepFreeze = require("../utils/deepFreeze");
 const {
   isObject,
   isString,
   isAllDigits,
   isFromPortugal,
-} = require("./validators");
+} = require("../utils/validators");
 
 const PhoneNumber = function (value) {
   this.value = Something.of(value)

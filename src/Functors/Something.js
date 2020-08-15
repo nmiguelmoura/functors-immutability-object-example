@@ -1,20 +1,4 @@
-const axios = require("axios");
-
-const Nothing = function (value) {
-  this.value = value;
-};
-
-Nothing.of = function (value) {
-  return new Nothing(value);
-};
-
-Nothing.prototype.map = function (fn) {
-  return this;
-};
-
-Nothing.prototype.validate = function (fn) {
-  return this;
-};
+const Nothing = require("./Nothing");
 
 const Something = function (value) {
   this.value = value;
@@ -44,7 +28,4 @@ Something.prototype.validate = function (fn) {
       });
 };
 
-module.exports = {
-  Something,
-  Nothing,
-};
+module.exports = Something;

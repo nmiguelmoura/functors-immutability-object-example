@@ -1,4 +1,4 @@
-const PhoneNumber = require("./PhoneNumber");
+const PhoneNumber = require("./ValueObjects/PhoneNumber");
 
 const myPhoneNumber = PhoneNumber.of({
   numb: "123456789",
