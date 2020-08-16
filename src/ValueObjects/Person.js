@@ -34,7 +34,7 @@ const Person = function (value) {
 
 Person.prototype = { ...BaseObject.prototype, ...Person.prototype };
 
-Person.prototype.fullSentence = function () {
+Person.prototype.getIdentity = function () {
   const { firstName, phoneNumber } = this.getValue();
 
   const formattedName = firstName
@@ -42,7 +42,7 @@ Person.prototype.fullSentence = function () {
     .map((val) => val.split(""))
     .map((val) => val.join(".")).value;
 
-  return `My name is ${formattedName} and my phone number is ${phoneNumber.fullNumber()}`;
+  return `My name is ${formattedName} and my phone number is ${phoneNumber.getFullNumber()}`;
 };
 
 Person.prototype.equals = function (other) {

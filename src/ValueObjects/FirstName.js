@@ -11,7 +11,7 @@ const FirstName = function (value) {
 
 FirstName.prototype = { ...BaseObject.prototype, ...FirstName.prototype };
 
-FirstName.prototype.fullSentence = function () {
+FirstName.prototype.getSentence = function () {
   return this
     .map((val) => `${val.ind}${val.numb}`)
     .map((val) => `The first name is ${val}`).value;

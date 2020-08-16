@@ -17,7 +17,7 @@ if (!myPhoneNumber.isValid()) {
 
 // ********** USE PROTOTYPE ****************
 // // SCENARIO 2 - call prototype function
-// console.log(myPhoneNumber.fullSentence());
+// console.log(myPhoneNumber.getSentence());
 
 // ********** DCLARATIVE AND CHAINABLE ****************
 // // SCENARIO 3 - map once
@@ -90,8 +90,8 @@ if (!me.isValid()) {
 }
 
 // // SCENARIO 10 - using a complex value object
-// console.log(me.getValue().phoneNumber.fullSentence());
-// console.log(me.fullSentence());
+// console.log(me.getValue().phoneNumber.getSentence());
+// console.log(me.getIdentity());
 // console.log(me.serialize());
 
 // // SCENARIO 11 - compare complex objects
