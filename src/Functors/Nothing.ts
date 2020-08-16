@@ -1,4 +1,4 @@
-const Nothing = function (value) {
+export const Nothing = function (value) {
   this.value = value;
 };
 
@@ -13,5 +13,3 @@ Nothing.prototype.map = function (fn) {
 Nothing.prototype.validate = function (fn) {
   return this;
 };
-
-module.exports = Nothing;

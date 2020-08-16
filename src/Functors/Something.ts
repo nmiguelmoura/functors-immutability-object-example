@@ -1,6 +1,6 @@
-const Nothing = require("./Nothing");
+import { Nothing } from "./Nothing";
 
-const Something = function (value) {
+export const Something = function (value) {
   this.value = value;
 };
 
@@ -27,5 +27,3 @@ Something.prototype.validate = function (fn) {
         message: `The value does not pass validation: ${fn.toString()}`,
       });
 };
-
-module.exports = Something;

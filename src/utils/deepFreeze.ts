@@ -1,6 +1,6 @@
 // from https://stackoverflow.com/questions/34776846/how-to-freeze-nested-objects-in-javascript
 
-const deepFreeze = (o) => {
+export const deepFreeze = (o) => {
   Object.freeze(o);
   if (o === undefined) {
     return o;
@@ -16,5 +16,3 @@ const deepFreeze = (o) => {
 
   return o;
 };
-
-module.exports = deepFreeze;

@@ -1,5 +1,5 @@
-const PhoneNumber = require("./ValueObjects/PhoneNumber");
-const Person = require("./ValueObjects/Person");
+import PhoneNumber from "./ValueObjects/PhoneNumber";
+import Person from "./ValueObjects/Person";
 
 const myPhoneNumber = PhoneNumber.of({
   numb: "123456789",
